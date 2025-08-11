@@ -54,7 +54,6 @@ public class AtmSearchTest {
                 )
         ));
 
-        // Дополнительные проверки
         assertThat(response.getCount(), greaterThanOrEqualTo(0));
         assertThat(response.getAtm().size(), lessThanOrEqualTo(10));
     }
@@ -76,8 +75,9 @@ public class AtmSearchTest {
         );
 
         assertThat(response.getCount(), greaterThanOrEqualTo(0));
-        assertThat(response.getPageNumber(), equalTo(1)); // default
-        //assertThat(response.getPageSize(), equalTo(12)); // default
+        assertThat(response.getPageNumber(), equalTo(1));
+        //assertThat(response.getPageSize(), equalTo(12));
     }
 
 }
+
